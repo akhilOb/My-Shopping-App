@@ -8,7 +8,7 @@
 function Router() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/:productID",
       element: <ProductOview />,
     },
   ]);

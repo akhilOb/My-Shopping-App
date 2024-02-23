@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ProductCard from "../Global/ProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../../redux/productDetailsSlice/productDetailsSlice";
 
 function SimilarProducts() {
+  const dispatch = useDispatch();
+  const allProducts = useSelector((state) => state.productDetails.allProducts);
+  console.log(allProducts, "allProducts");
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, []);
   return (
     <section>
       <Container>
@@ -10,18 +19,15 @@ function SimilarProducts() {
           Similar products
         </h2>
         <Row>
-          <Col sm={6} lg={4}>
-            <ProductCard />
-          </Col>
-          <Col sm={6} lg={4}>
-            <ProductCard />
-          </Col>
-          <Col sm={6} lg={4}>
-            <ProductCard />
-          </Col>
-          <Col sm={6} lg={4}>
-            <ProductCard />
-          </Col>
+          {allProducts &&
+            allProducts.length > 0 &&
+            allProducts.map((data, index) => {
+              return (
+                <Col key={index} sm={6} lg={4}>
+                  <ProductCard data={data} />
+                </Col>
+              );
+            })}
         </Row>
       </Container>
     </section>

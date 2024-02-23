@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
+import { useParams} from 'react-router-dom';
 
 import ImageWrapper from "../Global/ImageWrapper";
 import PricingDetails from "./PricingDetails";
@@ -9,8 +10,12 @@ import SelectToCart from "./SelectToCart";
 import CheckDelivery from "./CheckDelivery";
 import ProductInformation from "./ProductInformation";
 import RatingAndReviews from "./RatingAndReviews";
+import  {getProductDetails} from "../../redux/productDetailsSlice/productDetailsSlice";
 
 function ProductOverview() {
+  const dispatch = useDispatch()
+  const params = useParams();
+  // console.log(params.productID, "productID");
   const productDetails = useSelector(
     (state) => state.productDetails.productDetails
   );
@@ -19,6 +24,10 @@ function ProductOverview() {
   );
   // console.log(productDetails.ratings&&productDetails.ratings.ratings, "productDetails.ratings inside the page");
   const [productImages, setProductImages] = useState([]);
+
+  useEffect(() => {
+    dispatch(getProductDetails(params.productID))
+  }, [params.productID])
 
   useEffect(() => {
     // console.log(

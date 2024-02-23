@@ -196,11 +196,26 @@
         "avg_rating": 4.8,
         "total_ratings": 84,
         "ratings": [
-          { "name":1,"value": 4 },
-          { "name":2,"value": 15 },
-          { "name":3,"value": 25 },
-          { "name":4,"value": 45 },
-          { "name":5,"value": 12}
+          {
+            "name": 1,
+            "value": 4
+          },
+          {
+            "name": 2,
+            "value": 15
+          },
+          {
+            "name": 3,
+            "value": 25
+          },
+          {
+            "name": 4,
+            "value": 45
+          },
+          {
+            "name": 5,
+            "value": 12
+          }
         ]
       },
       "top_reviews": [
@@ -211,15 +226,15 @@
           "review": "Superb product <3 great quality and nice design. Will buy more product from Veirdo",
           "photos": [
             {
-              "thumbnail":  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
+              "thumbnail": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
               "src": ""
             },
             {
-              "thumbnail":  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
+              "thumbnail": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
               "src": ""
             },
             {
-              "thumbnail":  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
+              "thumbnail": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
               "src": ""
             }
           ]
@@ -259,25 +274,41 @@
         {
           "id": "1",
           "thumbnail": "",
-          "original_images": ["", "", ""],
+          "original_images": [
+            "",
+            "",
+            ""
+          ],
           "available": true
         },
         {
           "id": "2",
           "thumbnail": "",
-          "original_images": ["", "", ""],
+          "original_images": [
+            "",
+            "",
+            ""
+          ],
           "available": true
         },
         {
           "id": "3",
           "thumbnail": "",
-          "original_images": ["", "", ""],
+          "original_images": [
+            "",
+            "",
+            ""
+          ],
           "available": true
         },
         {
           "id": "4",
           "thumbnail": "",
-          "original_images": ["", "", ""],
+          "original_images": [
+            "",
+            "",
+            ""
+          ],
           "available": true
         }
       ],
@@ -360,60 +391,9 @@
   ],
   "cart": [
     {
-      "id": "df2f"
-    },
-    {
-      "id": "0bca"
-    },
-    {
-      "id": "2123"
-    },
-    {
-      "id": "123456",
-      "selected_color": "2",
-      "selected_size": 38
-    },
-    {
-      "id": "345f",
-      "selected_color": "1",
-      "selected_size": 32,
+      "id": "50b2",
       "product_id": "123456",
-      "cart_id": "lsyf6z8b"
-    },
-    {
-      "id": "a681",
-      "selected_color": "2",
-      "selected_size": 34,
-      "product_id": "123456",
-      "cart_id": "lsyfkt57"
-    },
-    {
-      "id": "f884",
-      "selected_color": "",
-      "selected_size": "",
-      "product_id": "123456",
-      "cart_id": "lsyfmzzu"
-    },
-    {
-      "id": "c3ad",
-      "selected_color": "",
-      "selected_size": "",
-      "product_id": "123456",
-      "cart_id": "lsynjjcy"
-    },
-    {
-      "id": "bb2b",
-      "selected_color": "",
-      "selected_size": "",
-      "product_id": "123456",
-      "cart_id": "lsynlkbq"
-    },
-    {
-      "id": "2a8d",
-      "selected_color": "",
-      "selected_size": "",
-      "product_id": "123456",
-      "cart_id": "lsynwqz9"
+      "cart_id": "lsyycvdz"
     }
   ]
 }

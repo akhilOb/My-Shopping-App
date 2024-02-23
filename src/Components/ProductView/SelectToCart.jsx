@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import { useDispatch } from "react-redux";
-import {addItemToCart} from "../../redux/productDetailsSlice/productDetailsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {addItemToCart, getAllcart} from "../../redux/productDetailsSlice/productDetailsSlice";
 import uniqid from 'uniqid';
 
 function SelectToCart({ color_beige, available_size, setProductImages, id }) {
   const dispatch = useDispatch();
-  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedColor, setSelectedColor] = useState("1");
   const [selectedSize, setSelectedSize] = useState("");
+  const cart = useSelector(
+    (state) => state.productDetails.cart
+  );
+  console.log( cart, "cart in page");
+
+  useEffect(() => {
+    dispatch(getAllcart())
+  }, [])
+
   const handleSelectColor = (item) => {
     setSelectedColor(item.id);
     setProductImages(item.original_images);
@@ -25,6 +34,11 @@ function SelectToCart({ color_beige, available_size, setProductImages, id }) {
     };
     dispatch(addItemToCart(data));
   };
+  function checkCart(){
+const presant = cart.some(obj => obj.product_id === id);
+return presant
+// return true
+  }
   return (
     <>
       <div className="title-secondary mb-2">COLOR-BEIGE</div>
@@ -39,7 +53,7 @@ function SelectToCart({ color_beige, available_size, setProductImages, id }) {
                   () => handleSelectColor(data)
                   // setProductImages(data.original_images)
                 }
-                className="rounded selected-item position-relative"
+                className={`rounded position-relative ${selectedColor==data.id?"selected-item":""}`}
                 style={{
                   backgroundImage: `url(${data.thumbnail})`,
                   width: "85px",
@@ -88,7 +102,7 @@ function SelectToCart({ color_beige, available_size, setProductImages, id }) {
             );
           })}
       </div>
-      <button onClick={() => handleAddItemToCart ()} className="add-to-cart-btn rounded p-2 para-sm font-medium text-uppercase mb-5">
+      <button onClick={() => handleAddItemToCart ()} disabled={checkCart()} className="add-to-cart-btn rounded p-2 para-sm font-medium text-uppercase mb-5">
         ADD TO CART
       </button>
     </>

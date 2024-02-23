@@ -5,6 +5,8 @@ const productDetailsSlice = createSlice({
   initialState: {
     isLoading: false,
     productDetails: {},
+    cart: [],
+    allProducts: [],
   },
   reducers: {
     // get individual product Details
@@ -46,8 +48,22 @@ const productDetailsSlice = createSlice({
     getAllCartSuccess: (state, action) => {
       console.log(action, "data in the success get cart");
       state.isLoading = false;
+      state.cart = action.payload;
     },
     getAllCartFailed: (state, action) => {
+      state.isLoading = false;
+    },
+    //get All products
+    getAllProducts: (state, action) => {
+      console.log(action, "coming inside slice get cart");
+      state.isLoading = true;
+    },
+    getAllProductsSuccess: (state, action) => {
+      console.log(action, "data in the success get cart");
+      state.isLoading = false;
+      state.allProducts = action.payload;
+    },
+    getAllProductsFailed: (state, action) => {
       state.isLoading = false;
     },
   },
@@ -64,6 +80,10 @@ export const {
 
   getAllcart,
   getAllCartSuccess,
-  getAllCartFailed
+  getAllCartFailed,
 
+  getAllProducts,
+  getAllProductsSuccess,
+  getAllProductsFailed,
+  
 } = productDetailsSlice.actions;

@@ -1,6 +1,6 @@
-import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 import instance from "../../api/api_instance";
-import {   addItemToCartFailed, addItemToCartSuccess } from "./productDetailsSlice";
+import {   addItemToCartFailed, addItemToCartSuccess, getAllcart } from "./productDetailsSlice";
 
 const getResponse = async (data) => {
   console.log(data, "Data in the saga");
@@ -36,6 +36,7 @@ function* addToCart(action) {
   const { productDetails, err } = yield call(getResponse, action.payload);
   if (productDetails) {
     yield put(addItemToCartSuccess(productDetails.data));
+    yield put(getAllcart(action.payload))
   } else {
     console.log(err);
     addItemToCartFailed(err)
@@ -43,7 +44,7 @@ function* addToCart(action) {
 }
 
 function* addItemToCartSaga() {
-  yield takeEvery("productDetail/addItemToCart", addToCart);
+  yield takeLatest("productDetail/addItemToCart", addToCart);
 }
 
 export default addItemToCartSaga;

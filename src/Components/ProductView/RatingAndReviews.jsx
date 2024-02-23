@@ -57,7 +57,7 @@ function RatingAndReviews({ ratings, top_reviews }) {
         </Row>
       </div>
 
-      <div>
+      {/* <div>
         {top_reviews &&
           top_reviews.length > 0 &&
           top_reviews.map((data, index) => {
@@ -96,7 +96,7 @@ function RatingAndReviews({ ratings, top_reviews }) {
             );
           })}
         <div></div>
-      </div>
+      </div> */}
     </>
   );
 }

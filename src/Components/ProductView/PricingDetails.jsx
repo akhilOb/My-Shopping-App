@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { HeartFill, StarFill, SuitHeart } from "react-bootstrap-icons";
-import { useDispatch, useSelector } from 'react-redux'
-import  {getProductDetails} from "../../redux/productDetailsSlice/productDetailsSlice";
 
 function PricingDetails({original_price,total_ratings,product_name,  applied_off,  avg_rating,  is_favorite}) {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(getProductDetails())
-  }, [])
+ 
   
   function getTheOfferPrice(original, off){
        if (typeof original !== 'number' || typeof off !== 'number') {

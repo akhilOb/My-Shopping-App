@@ -8,8 +8,8 @@ function CheckDelivery() {
         <input
           type="text"
           class="form-control border-0"
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
+          placeholder="ENTER PINCODE"
+          aria-label="PINCODE"
           aria-describedby="basic-addon2"
         />
         <div class="input-group-append border-0">

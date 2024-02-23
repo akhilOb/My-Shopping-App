@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Button, Badge } from "react-bootstrap";
 import { Heart, Person,Cart2 } from "react-bootstrap-icons";
+import {  useSelector } from "react-redux";
+
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const cart = useSelector(
+    (state) => state.productDetails.cart
+  );
   const Hamburger = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +92,7 @@ const Navbar = () => {
             <Button className="bg-light p-0 border-0">
               
                 <Cart2 className="text-secondary title-primary"/>
-                <Badge bg="danger" pill>New</Badge>
+                {cart.length>0&&<Badge bg="danger" pill>{cart.length}</Badge>}
                 </Button>
             </li>
           </ul>
