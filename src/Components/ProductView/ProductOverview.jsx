@@ -15,14 +15,12 @@ import  {getProductDetails} from "../../redux/productDetailsSlice/productDetails
 function ProductOverview() {
   const dispatch = useDispatch()
   const params = useParams();
-  // console.log(params.productID, "productID");
   const productDetails = useSelector(
     (state) => state.productDetails.productDetails
   );
   const productDetailsLoading = useSelector(
     (state) => state.productDetails.isLoading
   );
-  // console.log(productDetails.ratings&&productDetails.ratings.ratings, "productDetails.ratings inside the page");
   const [productImages, setProductImages] = useState([]);
 
   useEffect(() => {
@@ -30,11 +28,7 @@ function ProductOverview() {
   }, [params.productID])
 
   useEffect(() => {
-    // console.log(
-    //   productImages,
-    //   "LLLLL",
-    //   productDetails && productDetails.images
-    // );
+ 
     productDetails &&
       productDetails.images &&
       setProductImages(productDetails.images);

@@ -16,7 +16,6 @@ function Offers({ applicablee_offers }) {
         {applicablee_offers &&
           applicablee_offers.length > 0 &&
           applicablee_offers.map((data, index) => {
-            // console.log(data, "KOKOKOK");
             return (
               <SwiperSlide key={index}>
                 <div className="d-flex align-items-center justify-content-between  rounded p-2 offer-card">

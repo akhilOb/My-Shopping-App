@@ -11,7 +11,6 @@ function SelectToCart({ color_beige, available_size, setProductImages, id }) {
   const cart = useSelector(
     (state) => state.productDetails.cart
   );
-  console.log( cart, "cart in page");
 
   useEffect(() => {
     dispatch(getAllcart())
@@ -81,7 +80,6 @@ return presant
         {available_size &&
           available_size.length > 0 &&
           available_size.map((data, index) => {
-            // console.log(data, "size thing in map");
             return (
               <div
                 key={index}

@@ -7,7 +7,6 @@ import { getAllProducts } from "../../redux/productDetailsSlice/productDetailsSl
 function SimilarProducts() {
   const dispatch = useDispatch();
   const allProducts = useSelector((state) => state.productDetails.allProducts);
-  console.log(allProducts, "allProducts");
 
   useEffect(() => {
     dispatch(getAllProducts());

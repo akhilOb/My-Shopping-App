@@ -3,7 +3,6 @@ import instance from "../../api/api_instance";
 import {   addItemToCartFailed, addItemToCartSuccess, getAllcart } from "./productDetailsSlice";
 
 const getResponse = async (data) => {
-  console.log(data, "Data in the saga");
   const result = {
     productDetails: null,
     err: null,
@@ -16,10 +15,6 @@ const getResponse = async (data) => {
     });
 
     if (response) {
-      console.log(
-        "the response comijng inside the saga after adding",
-        response
-      );
       if (response.status === 200||response.status === 201) {
         result.productDetails = response;
       } else {
@@ -38,7 +33,6 @@ function* addToCart(action) {
     yield put(addItemToCartSuccess(productDetails.data));
     yield put(getAllcart(action.payload))
   } else {
-    console.log(err);
     addItemToCartFailed(err)
   }
 }

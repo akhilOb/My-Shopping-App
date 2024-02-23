@@ -4,10 +4,6 @@ import { PatchCheckFill } from "react-bootstrap-icons";
 import { Col, Row } from "react-bootstrap";
 
 function RatingAndReviews({ ratings, top_reviews }) {
-  // const [rating, setRating] = useState(4);
-  // const onPointerEnter = () => console.log('Enter')
-  // const onPointerLeave = () => console.log('Leave')
-  // const onPointerMove = (value: number, index: number) => console.log(value, index)
   const ratingxs = [4, 3, 5, 2, 4];
   return (
     <>

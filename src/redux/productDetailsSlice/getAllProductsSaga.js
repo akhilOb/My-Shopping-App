@@ -3,7 +3,6 @@ import instance from "../../api/api_instance";
 import {   getAllProductsSuccess, getAllProductsFailed } from "./productDetailsSlice";
 
 const getResponse = async (data) => {
-  console.log(data, "Data in the saga");
   const result = {
     products: null,
     err: null,
@@ -15,10 +14,6 @@ const getResponse = async (data) => {
     });
 
     if (response) {
-      console.log(
-        "the response comijng inside the saga after getting products",
-        response
-      );
       if (response.status === 200||response.status === 201) {
         result.products = response;
       } else {
