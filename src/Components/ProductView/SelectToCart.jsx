@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
+import { useDispatch } from "react-redux";
+import {addItemToCart} from "../../redux/productDetailsSlice/productDetailsSlice";
+import uniqid from 'uniqid';
 
 function SelectToCart({ color_beige, available_size, setProductImages, id }) {
+  const dispatch = useDispatch();
   const [selectedColor, setSelectedColor] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const handleSelectColor = (item) => {
@@ -11,13 +15,21 @@ function SelectToCart({ color_beige, available_size, setProductImages, id }) {
   const handleSizeChange = (item) => {
     setSelectedSize(item.size);
   };
-  const addItemToCart = () => {
-
+  const handleAddItemToCart = () => {
+    const cartID=uniqid()
+    const data = {
+      selected_color: selectedColor,
+      selected_size: selectedSize,
+      product_id: id,
+      cart_id:cartID
+    };
+    dispatch(addItemToCart(data));
   };
   return (
     <>
       <div className="title-secondary mb-2">COLOR-BEIGE</div>
-      <div className="">
+      <div className="scollbar-0 mb-5"  style={{overflowX:"scroll"}}>
+      <div className="d-flex gap-2 py-2" style={{width:"900px"}}>
         {color_beige &&
           color_beige.length > 0 &&
           color_beige.map((data, index) => {
@@ -27,53 +39,58 @@ function SelectToCart({ color_beige, available_size, setProductImages, id }) {
                   () => handleSelectColor(data)
                   // setProductImages(data.original_images)
                 }
+                className="rounded selected-item position-relative"
                 style={{
                   backgroundImage: `url(${data.thumbnail})`,
-                  width: "100px",
-                  height: "100px",
-                  backgroundPosition: "center",
-                  backgroundSize: "contain",
+                  width: "85px",
+                  height: "85px",
+                  backgroundPosition: "top",
+                  backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
                 key={index}
               >
-                {!data.available && <div>sold out</div>}
+                {data.available===false && <div className="mb-2 position-absolute bottom-0 end-0 text-center w-100">
+                  <div className="warning ">sold out</div>
+                  </div>}
               </div>
             );
           })}
       </div>
-      <div className="">
-        <div className="">SELECT SIZE</div>
-        <div>SIZE GUIDE</div>
       </div>
-      <div>
+     
+      <div className="d-flex justify-content-between align-items-center">
+        <div className="title-secondary mb-2">SELECT SIZE</div>
+        <div className="color-pink para-sm font-medium">SIZE GUIDE</div>
+      </div>
+      <div className="d-flex gap-2 flex-wrap mb-3">
         {available_size &&
           available_size.length > 0 &&
           available_size.map((data, index) => {
-            console.log(data, "size thing in map");
+            // console.log(data, "size thing in map");
             return (
               <div
-                onClick={() => handleSizeChange(data)}
-                className={`${
-                  selectedSize === ""
-                    ? data.preffered_size==true
-                      ? "border border-primary"
-                      : ""
-                    : selectedSize === data.size
-                    ? "border border-primary"
-                    : ""
-                }`}
                 key={index}
               >
-                {data.size}
-                {data.items_left < 3 && <div>2 left</div>}
+                <button   onClick={() => handleSizeChange(data)}
+                className={`${
+                  selectedSize === ""
+                    ? data.preffered_size === true
+                      ? "btn size-active bg-light para-sm"
+                      : ""
+                    : selectedSize === data.size
+                    ? "btn size-active bg-light para-sm"
+                    : ""
+                } btn btn-outline-secondary para-sm`}> {data.size}</button>
+               
+                {data.items_left < 3 && <div className="para-xs color-orange text-center mt-1 ">{data.items_left} left</div>}
               </div>
             );
           })}
       </div>
-      <Button onClick={() => addItemToCart()} variant="success">
+      <button onClick={() => handleAddItemToCart ()} className="add-to-cart-btn rounded p-2 para-sm font-medium text-uppercase mb-5">
         ADD TO CART
-      </Button>
+      </button>
     </>
   );
 }

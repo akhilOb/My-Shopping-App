@@ -10,8 +10,17 @@ function SimilarProducts() {
           Similar products
         </h2>
         <Row>
-          <Col sm={4}>
-            <ProductCard thumbnail="https://picsum.photos/seed/picsum/1200/768"/>
+          <Col sm={6} lg={4}>
+            <ProductCard />
+          </Col>
+          <Col sm={6} lg={4}>
+            <ProductCard />
+          </Col>
+          <Col sm={6} lg={4}>
+            <ProductCard />
+          </Col>
+          <Col sm={6} lg={4}>
+            <ProductCard />
           </Col>
         </Row>
       </Container>

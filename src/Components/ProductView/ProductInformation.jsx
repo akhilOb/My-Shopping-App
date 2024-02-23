@@ -1,59 +1,47 @@
 import React from "react";
-import Accordion from 'react-bootstrap/Accordion';
-import {FileEarmarkTextFill} from "react-bootstrap-icons";
-function ProductInformation() {
+import Accordion from "react-bootstrap/Accordion";
+import { FileEarmarkText, Truck, ArrowClockwise } from "react-bootstrap-icons";
+function ProductInformation({ product_informations }) {
   return (
-    <>
-    <div className="title-secondary mb-2" >PRODUCT INFORMATION</div>
-    <Accordion defaultActiveKey="">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>
-          <div>
-            <div>
-              <FileEarmarkTextFill />
-            </div>
-            <div>
-              <div>Title</div>
-              <div>Description</div>
-            </div>
-          </div>
-        </Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      {/* <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item> */}
-    </Accordion>
-    </>
+    <div className="my-5">
+      <div className="title-secondary mb-2">PRODUCT INFORMATION</div>
+      <Accordion defaultActiveKey="" >
+        {product_informations &&
+          product_informations.length > 0 &&
+          product_informations.map((data, index) => {
+            return (
+              <Accordion.Item key={index} eventKey="0" className={`border-0 ${index===product_informations.length -1 ? "":"border-bottom"} ps-0`}>
+                <Accordion.Header className="bg-white ps-0">
+                  <div className="d-flex">
+                    <div>
+                      {data.icon === 1 ? (
+                        <FileEarmarkText className="title-primary text-dark" />
+                      ) : data.icon === 2 ? (
+                        <Truck className="title-primary text-dark" />
+                      ) : data.icon === 3 ? (
+                        <ArrowClockwise className="title-primary text-dark" />
+                      ) : (
+                        <FileEarmarkText className="title-primary text-dark" />
+                      )}
+                    </div>
+                    <div className="ms-3">
+                      <h1 className="para-sm text-dark font-medium mb-1">
+                        {data.title}
+                      </h1>
+                      <p className="para-xs text-secondary mb-0">
+                        data.sub_title
+                      </p>
+                    </div>
+                  </div>
+                </Accordion.Header>
+                <Accordion.Body className="ps-0 pt-0 para-sm">
+                  {data.description}
+                </Accordion.Body>
+              </Accordion.Item>
+            );
+          })}
+      </Accordion>
+      </div>
   );
 }
 

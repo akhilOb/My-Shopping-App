@@ -17,15 +17,15 @@ function ProductOverview() {
   const productDetailsLoading = useSelector(
     (state) => state.productDetails.isLoading
   );
-  console.log(productDetails, "productDetails inside the page");
+  // console.log(productDetails.ratings&&productDetails.ratings.ratings, "productDetails.ratings inside the page");
   const [productImages, setProductImages] = useState([]);
 
   useEffect(() => {
-    console.log(
-      productImages,
-      "LLLLL",
-      productDetails && productDetails.images
-    );
+    // console.log(
+    //   productImages,
+    //   "LLLLL",
+    //   productDetails && productDetails.images
+    // );
     productDetails &&
       productDetails.images &&
       setProductImages(productDetails.images);
@@ -64,8 +64,10 @@ function ProductOverview() {
             id={productDetails.id}
           />
           <CheckDelivery />
-          <ProductInformation />
-          <RatingAndReviews />
+          <ProductInformation
+            product_informations={productDetails.product_informations}
+          />
+          <RatingAndReviews ratings={productDetails.ratings} top_reviews={productDetails.top_reviews} />
         </Col>
       </Row>
     </Container>

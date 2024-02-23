@@ -11,7 +11,7 @@ const getResponse = async (data) => {
     const response = await instance({url: `/products?id=123456`,method: 'GET',})
 
     if (response) {
-      console.log("the response comijng inside the saga", response);
+      // console.log("the response comijng inside the saga", response);
       if (response.status === 200) {
         result.productDetails = response
       } else {
@@ -29,7 +29,7 @@ function* fetchProductDetails(action) {
   if (productDetails) {
     yield put(getProductDetailsSuccess(productDetails.data))
   } else {
-    console.log('failed to get users');
+    // console.log('failed to get users');
     console.log(err)
   }
 }
