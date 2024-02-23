@@ -1,0 +1,281 @@
+{
+  "products": [
+    {
+      "id": "123456",
+      "original_price": 2499,
+      "applied_off": 20,
+      "product_name": "Flower Printed Oversized Fit",
+      "avg_rating": 4.5,
+      "total_ratings": "2k",
+      "is_favorite": true,
+      "is_new_arrival": true,
+      "images": [
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694771177_5228976.jpg?format=webp&w=900&dpr=1.3",
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694771177_6112949.jpg?format=webp&w=900&dpr=1.3",
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694771177_7936866.jpg?format=webp&w=900&dpr=1.3"
+      ],
+      "applicablee_offers": [
+        {
+          "title": "Buy 2 tees at just ₹699",
+          "description": " Add any 2 tees to the cart to avail"
+        },
+        {
+          "title": "Buy 2 tees at just ₹699",
+          "description": " Add any 2 tees to the cart to avail"
+        },
+        {
+          "title": "Buy 2 tees at just ₹699",
+          "description": " Add any 2 tees to the cart to avail"
+        }
+      ],
+      "color_beige": [
+        {
+          "id": "1",
+          "thumbnail": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1702470333_2408052.jpg?v=2",
+          "original_images": [
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1707632985_8451846.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1702470333_2408052.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1702470333_6226023.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1702470333_7994544.jpg?format=webp&w=480&dpr=1.3"
+          ],
+          "available": true
+        },
+        {
+          "id": "2",
+          "thumbnail": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_6386586.jpg?format=webp&w=480&dpr=1.3",
+          "original_images": [
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_6386586.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_6702039.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_7097871.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1708336657_2103432.jpg?format=webp&w=480&dpr=1.3"
+          ],
+          "available": true
+        },
+        {
+          "id": "3",
+          "thumbnail": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1683181022_2156546.jpg?format=webp&w=480&dpr=1.3",
+          "original_images": [
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1683181022_2156546.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1682160388_7282322.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1682160388_6268362.jpg?format=webp&w=480&dpr=1.3",
+            "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1682160388_6666676.jpg?format=webp&w=480&dpr=1.3"
+          ],
+          "available": true
+        },
+        {
+          "id": "4",
+          "thumbnail": "",
+          "original_images": ["", "", ""],
+          "available": true
+        }
+      ],
+      "available_size": [
+        {
+          "size": 28,
+          "items_left": 1,
+          "preffered_size": true
+        },
+        {
+          "size": 30,
+          "items_left": 11,
+          "preffered_size": false
+        },
+        {
+          "size": 32,
+          "items_left": 18,
+          "preffered_size": false
+        },
+        {
+          "size": 34,
+          "items_left": 15,
+          "preffered_size": false
+        },
+        {
+          "size": 36,
+          "items_left": 1,
+          "preffered_size": false
+        },
+        {
+          "size": 38,
+          "items_left": 10,
+          "preffered_size": false
+        },
+        {
+          "size": 40,
+          "items_left": 8,
+          "preffered_size": false
+        },
+        {
+          "size": 42,
+          "items_left": 2,
+          "preffered_size": false
+        }
+      ],
+      "ratings": {
+        "avg_rating": 4,
+        "total_ratings": 84,
+        "ratings": {
+          "1": 4,
+          "2": 5,
+          "3": 26,
+          "4": 34,
+          "5": 15
+        }
+      },
+      "top_reviews": [
+        {
+          "name": "Shravya BR",
+          "isVerified": true,
+          "date": "7 Months ago",
+          "review": "Superb product <3 great quality and nice design. Will buy more product from Veirdo",
+          "photos": [
+            {
+              "thumbnail": "",
+              "src": ""
+            },
+            {
+              "thumbnail": "",
+              "src": ""
+            },
+            {
+              "thumbnail": "",
+              "src": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7891011",
+      "original_price": 2499,
+      "applied_off": 20,
+      "product_name": "Flower Printed Oversized Fit",
+      "avg_rating": 4.5,
+      "total_ratings": 2000,
+      "is_favorite": true,
+      "is_new_arrival": true,
+      "images": [
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695638309_7831980.jpg?format=webp&w=900&dpr=1.3",
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694771177_5228976.jpg?format=webp&w=900&dpr=1.3",
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694771177_6112949.jpg?format=webp&w=900&dpr=1.3",
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694771177_7936866.jpg?format=webp&w=900&dpr=1.3"
+      ],
+      "applicablee_offers": [
+        {
+          "title": "Buy 2 tees at just ₹699",
+          "description": " Add any 2 tees to the cart to avail"
+        },
+        {
+          "title": "Buy 2 tees at just ₹699",
+          "description": " Add any 2 tees to the cart to avail"
+        },
+        {
+          "title": "Buy 2 tees at just ₹699",
+          "description": " Add any 2 tees to the cart to avail"
+        }
+      ],
+      "color_beige": [
+        {
+          "id": "1",
+          "thumbnail": "",
+          "original_images": ["", "", ""],
+          "available": true
+        },
+        {
+          "id": "2",
+          "thumbnail": "",
+          "original_images": ["", "", ""],
+          "available": true
+        },
+        {
+          "id": "3",
+          "thumbnail": "",
+          "original_images": ["", "", ""],
+          "available": true
+        },
+        {
+          "id": "4",
+          "thumbnail": "",
+          "original_images": ["", "", ""],
+          "available": true
+        }
+      ],
+      "available_size": [
+        {
+          "size": 28,
+          "items_left": 1,
+          "preffered_size": true
+        },
+        {
+          "size": 30,
+          "items_left": 11,
+          "preffered_size": false
+        },
+        {
+          "size": 32,
+          "items_left": 18,
+          "preffered_size": false
+        },
+        {
+          "size": 34,
+          "items_left": 15,
+          "preffered_size": false
+        },
+        {
+          "size": 36,
+          "items_left": 1,
+          "preffered_size": false
+        },
+        {
+          "size": 38,
+          "items_left": 10,
+          "preffered_size": false
+        },
+        {
+          "size": 40,
+          "items_left": 8,
+          "preffered_size": false
+        },
+        {
+          "size": 42,
+          "items_left": 2,
+          "preffered_size": false
+        }
+      ],
+      "ratings": {
+        "avg_rating": 4,
+        "total_ratings": 84,
+        "ratings": {
+          "1": 4,
+          "2": 5,
+          "3": 26,
+          "4": 34,
+          "5": 15
+        }
+      },
+      "top_reviews": [
+        {
+          "name": "Shravya BR",
+          "isVerified": true,
+          "date": "7 Months ago",
+          "review": "Superb product <3 great quality and nice design. Will buy more product from Veirdo",
+          "photos": [
+            {
+              "thumbnail": "",
+              "src": ""
+            },
+            {
+              "thumbnail": "",
+              "src": ""
+            },
+            {
+              "thumbnail": "",
+              "src": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

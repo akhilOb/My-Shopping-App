@@ -1,0 +1,137 @@
+{
+  "id": "123456",
+  "original_price": 2499,
+  "applied_off": 20,
+  "product_name": "Flower Printed Oversized Fit",
+  "avg_rating": 4.5,
+  "total_ratings": 2000,
+  "is_favorite": true,
+  "is_new_arrival": true,
+  "applicablee_offers": [
+    {
+      "title": "Buy 2 tees at just ₹699",
+      "description": " Add any 2 tees to the cart to avail"
+    },
+    {
+      "title": "Buy 2 tees at just ₹699",
+      "description": " Add any 2 tees to the cart to avail"
+    },
+    {
+      "title": "Buy 2 tees at just ₹699",
+      "description": " Add any 2 tees to the cart to avail"
+    }
+  ],
+  "color_beige": [
+    {
+      "thumbnail": "",
+      "original_images": [
+        "",
+        "",
+        ""
+      ],
+      "available": true
+    },
+    {
+      "thumbnail": "",
+      "original_images": [
+        "",
+        "",
+        ""
+      ],
+      "available": true
+    },
+    {
+      "thumbnail": "",
+      "original_images": [
+        "",
+        "",
+        ""
+      ],
+      "available": true
+    },
+    {
+      "thumbnail": "",
+      "original_images": [
+        "",
+        "",
+        ""
+      ],
+      "available": true
+    }
+  ],
+  "available_size": [
+    {
+      "size": 28,
+      "items_left": 1,
+      "preffered_size":true
+    },
+    {
+      "size": 30,
+      "items_left": 11,
+      "preffered_size":false
+    },
+    {
+      "size": 32,
+      "items_left": 18,
+      "preffered_size":false
+    },
+    {
+      "size": 34,
+      "items_left": 15,
+      "preffered_size":false
+    },
+    {
+      "size": 36,
+      "items_left": 1,
+      "preffered_size":false
+    },
+    {
+      "size": 38,
+      "items_left": 10,
+      "preffered_size":false
+    },
+    {
+      "size": 40,
+      "items_left": 8,
+      "preffered_size":false
+    },
+    {
+      "size": 42,
+      "items_left": 2,
+      "preffered_size":false
+    }
+  ],
+  "ratings": {
+    "avg_rating": 4,
+    "total_ratings": 84,
+    "ratings": {
+      "1": 4,
+      "2": 5,
+      "3": 26,
+      "4": 34,
+      "5": 15
+    }
+  },
+  "top_reviews": [
+    {
+      "name": "Shravya BR",
+      "isVerified": true,
+      "date": "7 Months ago",
+      "review": "Superb product <3 great quality and nice design. Will buy more product from Veirdo",
+      "photos": [
+        {
+          "thumbnail": "",
+          "src": ""
+        },
+        {
+          "thumbnail": "",
+          "src": ""
+        },
+        {
+          "thumbnail": "",
+          "src": ""
+        }
+      ]
+    }
+  ]
+}
